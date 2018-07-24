@@ -22,6 +22,6 @@ class Principal extends CI_Controller {
 	{
 		$this->load->view('layout/header');
                 $this->load->view('principal/index');
-                $this->load->view('principal/footer');
+                $this->load->view('layout/footer');
 	}
 }
