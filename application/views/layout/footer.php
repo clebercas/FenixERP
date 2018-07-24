@@ -1,16 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-            <!-- Footer -->
-            <div class="legal">
-                <div class="copyright">
-                    &copy; <?php echo date('Y');?> <a href="javascript:void(0);">FenixERP</a>.
-                </div>
-                <div class="version">
-                    <b>Version: </b> 1.0
-                </div>
-            </div>
-            <!-- #Footer -->
     <!-- Jquery Core Js -->
     <script src="plugins/jquery/jquery.min.js"></script>
 
