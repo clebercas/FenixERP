@@ -88,6 +88,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <span>Home</span>
                                 </a>
                             </li>
+                            <li class="active">
+                                <a href="usuarios">
+                                    <i class="material-icons">person</i>
+                                    <span>Usuários</span>
+                                </a>
+                            </li>
                             <li>
                                 <a href="javascript:void(0);" class="menu-toggle">
                                     <i class="material-icons">assignment</i>
