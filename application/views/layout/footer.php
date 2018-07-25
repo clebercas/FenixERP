@@ -25,6 +25,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- ChartJs -->
     <script src="plugins/chartjs/Chart.bundle.js"></script>
+    
+        <!-- Validation Plugin Js -->
+    <script src="plugins/jquery-validation/jquery.validate.js"></script>
 
     <!-- Flot Charts Plugin Js -->
     <script src="plugins/flot-charts/jquery.flot.js"></script>
@@ -39,6 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Custom Js -->
     <script src="js/admin.js"></script>
     <script src="js/pages/index.js"></script>
+    <script src="js/pages/examples/sign-in.js"></script>
 
     <!-- Demo Js -->
     <script src="js/demo.js"></script>
