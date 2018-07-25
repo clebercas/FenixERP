@@ -30,5 +30,11 @@ class Login extends CI_Controller {
             $this->load->view('layout/footer');
         }
     }
+    
+    public function logout()
+    {        
+        $logout = $this->ion_auth->logout();
+        redirect('login','refresh');
+    }
 
 }
