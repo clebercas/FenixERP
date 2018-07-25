@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <!-- User Info -->
                     <div class="user-info">
                         <div class="image">
-                            <img src="images/user.png" width="48" height="48" alt="User" />
+                            <img src="<?php echo site_url('images/user.png')?>" width="48" height="48" alt="User" />
                         </div>
                         <div class="info-container">
                             <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
                                     <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="login/logout"><i class="material-icons">input</i>Sair</a></li>
+                                    <li><a href="<?php echo site_url('login/logout')?>"><i class="material-icons">input</i>Sair</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -96,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                             </li>
                             <li class="active">
-                                <a href="usuarios">
+                                <a href="<?php echo site_url('usuarios')?>">
                                     <i class="material-icons">person</i>
                                     <span>Usuários</span>
                                 </a>

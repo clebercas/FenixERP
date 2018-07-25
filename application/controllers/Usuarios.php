@@ -15,6 +15,7 @@ class Usuarios extends CI_Controller {
         }
 
         $this->load->model('ion_auth_model');
+        $this->load->library('form_validation');
     }
 
     public function index() {
@@ -28,10 +29,23 @@ class Usuarios extends CI_Controller {
     
     public function add() {
 
+        $this->form_validation->set_rules('username', 'Nome', 'required');
+        $this->form_validation->set_rules('password', 'Senha', 'required');
+        $this->form_validation->set_rules('email', 'e-mail', 'required');
 
-        $this->load->view('layout/header');
-        $this->load->view('usuarios/add');
-        $this->load->view('layout/footer');
+        if ($this->form_validation->run() == TRUE)
+        {
+            echo '<pre>';
+                    print_r($this->input->post());
+            echo '</pre>';
+            
+        }
+        else
+            {
+                $this->load->view('layout/header');
+                $this->load->view('usuarios/add');
+                $this->load->view('layout/footer');
+            }
     }
 
 }

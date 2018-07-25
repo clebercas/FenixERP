@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- Botão de adição de novo usuário -->
             <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">
-                <a class="btn btn-primary" title="Novo usuário"><i class="material-icons left">add</i>Adicionar</a>
+                <a href="<?php echo site_url('usuarios/add')?>" class="btn btn-primary" title="Novo usuário"><i class="material-icons left">add</i>Adicionar</a>
             </div>
             </div>
             <!-- Botão de adição de novo usuário -->
