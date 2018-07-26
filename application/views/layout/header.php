@@ -22,6 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Waves Effect Css -->
         <link href="<?php echo site_url('plugins/node-waves/waves.css') ?>" rel="stylesheet" />
 
+        <!-- Sweetalert Css -->
+        <link href="<?php echo site_url('plugins/sweetalert/sweetalert.css')?>" rel="stylesheet" />
+        
         <!-- Animation Css -->
         <link href="<?php echo site_url('plugins/animate-css/animate.css')?>" rel="stylesheet" />
 

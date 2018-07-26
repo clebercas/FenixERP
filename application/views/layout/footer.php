@@ -39,6 +39,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Sparkline Chart Plugin Js -->
     <script src="<?php echo site_url('plugins/jquery-sparkline/jquery.sparkline.js')?>"></script>
     
+    <!-- Bootstrap Notify Plugin Js -->
+    <script src="<?php echo site_url('plugins/bootstrap-notify/bootstrap-notify.js')?>"></script>
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="<?php echo site_url('plugins/sweetalert/sweetalert.min.js')?>"></script>
+    
     <!-- Jquery DataTable Plugin Js -->
     <script src="<?php echo site_url('plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.min.js')?>"></script>
     <script src="<?php echo site_url('plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js')?>"></script>
@@ -57,6 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="<?php echo site_url('js/pages/index.js')?>"></script>
     <script src="<?php echo site_url('js/pages/examples/sign-in.js')?>"></script>
     <script src="<?php echo site_url('js/pages/tables/jquery-datatable.js')?>"></script>
+    <script src="<?php echo site_url('js/pages/ui/dialogs.js')?>"></script>
 
 </body>
 

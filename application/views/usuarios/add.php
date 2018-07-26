@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="row">
             <div class="col-xs-12col-sm-12 col-md-12 col-lg-12">
-                <p><?php echo validation_errors()?></p>
+                <p><?php erros_validacao()?></p>
             </div>
         </div>
 
@@ -23,22 +23,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <div class="body">
                         <form id="form_add" name="form_add" method="post">
+                            <label for="grupo">Grupo</label>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <select class="form-control show-tick" name="grupo">
+                                        <option></option>
+                                        <option value="1">Administrador</option>
+                                        <option value="2">Membro</option>                                        
+                                    </select>
+                                </div>
+                            </div>
                             <label for="username">Nome</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="username" name ="username" class="form-control" placeholder="Digite o nome">
+                                    <input type="text" id="username" name ="username" class="form-control" value="<?php echo set_value('username')?>" placeholder="Digite o nome">
                                 </div>
                             </div>
                             <label for="email">Email</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite o emmail">
+                                    <input type="email" id="email" name="email" class="form-control" value="<?php echo set_value('email')?>" placeholder="Digite o emmail">
                                 </div>
                             </div>
                             <label for="password">Senha</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="password" name="password" class="form-control" placeholder="Digite a Senha">
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Digite a Senha">
+                                </div>
+                            </div>
+                            <label for="password2">Confirmação de senha</label>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="password" id="password2" name="password2" class="form-control" placeholder="Confirme a Senha">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary m-t-15 waves-effect">SALVAR</button>

@@ -17,6 +17,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             </div>
             <!-- Botão de adição de novo usuário -->
+            
+            <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <?php
+               get_msg('msgsucess');
+               get_msg('erro');
+               ?>
+            </div>
+            </div>
+            
+            
+            
+            
+            
         <!-- Tabela -->
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

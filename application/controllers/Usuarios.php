@@ -29,16 +29,25 @@ class Usuarios extends CI_Controller {
     
     public function add() {
 
-        $this->form_validation->set_rules('username', 'Nome', 'required');
-        $this->form_validation->set_rules('password', 'Senha', 'required');
-        $this->form_validation->set_rules('email', 'e-mail', 'required');
+        $this->form_validation->set_rules('username', 'Nome', 'required|min_length[4]|max_length[12]',array('min_length'=>'O campo nome de usuário deve ter pelo menos 4 caracteres.'));
+        $this->form_validation->set_rules('password', 'Senha', 'required|min_length[6]|max_length[12]',array('min_length'=>'O campo senha precisa ter 6 caracteres no mínimo.','max_length'=>'O campo senha precisa ter no máximo12 caracteres.'));
+        $this->form_validation->set_rules('password2', 'Conferir senha', 'required|matches[password]',array('matches'=>'O campo senha não confere.'));
+        $this->form_validation->set_rules('email', 'e-mail', 'required|valid_email|is_unique[users.email]');
 
         if ($this->form_validation->run() == TRUE)
         {
-            echo '<pre>';
-                    print_r($this->input->post());
-            echo '</pre>';
-            
+                $username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$email = $this->input->post('email');
+                $grupo = $this->input->post('grupo');
+		$additional_data = array(
+                                    'username'=>$username,
+                );
+		$group = array($grupo); // Sets user to admin.
+
+		$this->ion_auth->register($username, $password, $email, $additional_data, $group);
+                set_msg('msgsucess','Cadastro realizado com sucesso.','sucesso');
+                redirect('usuarios','refresh');
         }
         else
             {
