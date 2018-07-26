@@ -19,10 +19,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- Botão de adição de novo usuário -->
             
             <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                <?php
                get_msg('msgsucess');
-               get_msg('erro');
+               get_msg('msgerro');
                ?>
             </div>
             </div>
@@ -43,7 +43,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <th>#</th>
                                         <th>Nome</th>
                                         <th>E-mail</th>
-                                        <th>Ações</th>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-right">Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -54,7 +55,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <td>' . $user->id . '</td>
                                                     <td>' . $user->username . '</td>
                                                     <td>' . $user->email . '</td>
-                                                    <td><a class="btn"><i class="material-icons left">create</i>Editar</a> <a class="btn"><i class="material-icons left">delete</i>Apagar</a></td>
+                                                    <td class="text-center">' .($user->active == 1 ? '<span class="label label-primary">Ativo</span>' : '<span class="label label-danger">Inativo</span>'). '</td>
+                                                    <td class="text-right"><a href="'.site_url('usuarios/edit').'/'.$user->id.'" class="btn"><i class="material-icons left">create</i>Editar</a> <a class="btn"><i class="material-icons left">delete</i>Apagar</a></td>
                                               </tr>';
                                     }
                                     ?>

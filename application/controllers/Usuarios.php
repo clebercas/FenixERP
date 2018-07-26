@@ -56,5 +56,29 @@ class Usuarios extends CI_Controller {
                 $this->load->view('layout/footer');
             }
     }
+    
+    public function edit($id=NULL){
+        if($id==NULL){
+            set_msg('msgerro','Você precisa selecionar um usuário para alterar','erro');
+            redirect('usuarios','refresh');
+        }   
+        
+        $user = $this->ion_auth->user($id)->row();
+        
+        if($user==NULL){
+            set_msg('msgerro','Você precisa selecionar um usuário para alterar','erro');
+            redirect('usuarios','refresh');
+        }
+        
+        $group = $this->ion_auth->get_users_groups($user->id)->row();
+        
+        $data['user'] = $user;
+        $data['group'] = $group->id;
+        $this->load->view('layout/header');
+        $this->load->view('usuarios/edit',$data);
+        $this->load->view('layout/footer');
+       
+        
+    }
 
 }
