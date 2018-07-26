@@ -50,14 +50,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <tbody>
                                     <?php
                                     foreach ($users as $user) {
+                                        
+                                        if ($user->id != 1){
 
-                                        echo '<tr>
-                                                    <td>' . $user->id . '</td>
-                                                    <td>' . $user->username . '</td>
-                                                    <td>' . $user->email . '</td>
-                                                    <td class="text-center">' .($user->active == 1 ? '<span class="label label-primary">Ativo</span>' : '<span class="label label-danger">Inativo</span>'). '</td>
-                                                    <td class="text-right"><a href="'.site_url('usuarios/edit').'/'.$user->id.'" class="btn"><i class="material-icons left">create</i>Editar</a> <a class="btn"><i class="material-icons left">delete</i>Apagar</a></td>
-                                              </tr>';
+                                            echo '<tr>
+                                                        <td>' . $user->id . '</td>
+                                                        <td>' . $user->username . '</td>
+                                                        <td>' . $user->email . '</td>
+                                                        <td class="text-center">' .($user->active == 1 ? '<span class="label label-primary">Ativo</span>' : '<span class="label label-danger">Inativo</span>'). '</td>
+                                                        <td class="text-right"><a href="'.site_url('usuarios/edit').'/'.$user->id.'" class="btn"><i class="material-icons left">create</i>Editar</a> <a class="btn"><i class="material-icons left">delete</i>Apagar</a></td>
+                                                  </tr>';
+                                        }else{
+                                            if($this->session->user_id==1){
+                                                echo '<tr>
+                                                        <td>' . $user->id . '</td>
+                                                        <td>' . $user->username . '</td>
+                                                        <td>' . $user->email . '</td>
+                                                        <td class="text-center">' .($user->active == 1 ? '<span class="label label-primary">Ativo</span>' : '<span class="label label-danger">Inativo</span>'). '</td>
+                                                        <td class="text-right"><a href="'.site_url('usuarios/edit').'/'.$user->id.'" class="btn"><i class="material-icons left">create</i>Editar</a> <a class="btn"><i class="material-icons left">delete</i>Apagar</a></td>
+                                                      </tr>';
+                                            }
+                                        }
                                     }
                                     ?>
                                 </tbody>

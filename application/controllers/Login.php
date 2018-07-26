@@ -22,6 +22,7 @@ class Login extends CI_Controller {
             if ($this->ion_auth->login($identity, $password, $remember)) {
                 redirect('principal', 'refresh');
             } else {
+                set_msg('msgerro', 'Ocorreu um erro, tente novamente.', 'erro');
                 redirect('login', 'refresh');
             }
         } else {

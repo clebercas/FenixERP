@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <a href="javascript:void(0);">Fenix<b>ERP</b></a>
         <small>Sistema de Gestão</small>
     </div>
+    <?php get_msg('msgerro');?>
     <div class="card">
         <div class="body">
             <form id="sign_in" method="POST">

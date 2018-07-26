@@ -25,6 +25,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <div class="body">
                         <form id="form_add" name="form_add" method="post">
+                            <input type="hidden" value="<?php echo $user->id?>" name="id_usuario"></input>
+                            <?php if($this->session->user_id==1):?><!-- Somente o usuário admin pode realizar a edição do grupo-->
                             <label for="grupo">Grupo</label>
                             <div class="form-group">
                                 <div class="form-line">
@@ -35,7 +37,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         ?> 
                                             </select>
                                 </div>
+                               
                             </div>
+                             <?php endif;?>
                             <label for="username">Nome</label>
                             <div class="form-group">
                                 <div class="form-line">
